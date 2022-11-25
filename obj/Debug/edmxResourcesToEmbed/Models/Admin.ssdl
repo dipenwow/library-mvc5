@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdminModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AdminModelStoreContainer">
+    <EntitySet Name="tblAdmins" EntityType="AdminModel.Store.tblAdmins" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tblAdmins">
+    <Key>
+      <PropertyRef Name="AdminId" />
+    </Key>
+    <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="AdminEmail" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AdminPass" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+</Schema>

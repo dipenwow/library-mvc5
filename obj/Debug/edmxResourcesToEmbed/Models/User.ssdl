@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryMSWAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LibraryMSWAModelStoreContainer">
+    <EntitySet Name="tblUsers" EntityType="LibraryMSWAModel.Store.tblUsers" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tblUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="UserGender" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="UserDep" Type="nchar" Nullable="true" MaxLength="10" />
+    <Property Name="UserAdmNo" Type="int" Nullable="true" />
+    <Property Name="UserEmail" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="UserPass" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+</Schema>

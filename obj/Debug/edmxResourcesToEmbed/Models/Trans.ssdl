@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryMSWAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LibraryMSWAModelStoreContainer">
+    <EntitySet Name="tblTransactions" EntityType="LibraryMSWAModel.Store.tblTransactions" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tblTransactions">
+    <Key>
+      <PropertyRef Name="TranId" />
+    </Key>
+    <Property Name="TranId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookId" Type="int" Nullable="true" />
+    <Property Name="BookTitle" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="BookISBN" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="TranStatus" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="TranDate" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="UserId" Type="int" Nullable="true" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+</Schema>
